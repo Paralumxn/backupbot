@@ -2,8 +2,6 @@ const { Client, Intents, Collection, MessageEmbed, MessageAttachment } = require
 require('dotenv').config();
 const prefixSchema = require('./Schemas/setPrefix')
 
-
-const { connections, level } = require('./config.json')
 const client = new Client
 ({ intents: [Intents.FLAGS.GUILDS,
   Intents.FLAGS.GUILD_MESSAGE_REACTIONS, 
