@@ -12,10 +12,10 @@ const client = new Client
  partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
  const mongoose = require('mongoose')
- mongoose.connect(`mongodb+srv://${process.env.connection}`, {useUnifiedTopology: true, useNewUrlParser: true})
+ mongoose.connect(process.env.connection, {useUnifiedTopology: true, useNewUrlParser: true})
 
  const Levels = require('discord.js-leveling')
- Levels.setURL(`mongodb+srv://${process.env.level}`)
+ Levels.setURL(process.env.level)
 const ms = require('ms')
 const fs = require('fs');
 client.commands = new Collection();
