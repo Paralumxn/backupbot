@@ -6,7 +6,7 @@ module.exports = {
     aliases: [""],
     description: "Casino Work",
     cooldown: 1000 * 30,
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
 
         const min = 10000
         const max = 15000
@@ -23,7 +23,7 @@ module.exports = {
                 data.save()
                 message.channel.send(member.username + ` worked and obtained $${amount.toLocaleString()}.`)
             } else {
-                return message.channel.send("Looks like you dont have any records yet. Create your account now by typing `.start`")
+                return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
             }
             
         })

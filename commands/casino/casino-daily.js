@@ -6,7 +6,7 @@ module.exports = {
     aliases: [""],
     cooldown: 1000 * 86400,
     description: "Casino Daily",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
         const amount = 500000
         const user = message.author
 
@@ -19,7 +19,7 @@ module.exports = {
                 data.save()
                 message.channel.send(`You claimed your daily coins worth of $${amount.toLocaleString()}`)
             } else {
-                return message.channel.send("Looks like you dont have any records yet. Create your account now by typing `.start`")
+                return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
             }
         })  
     }

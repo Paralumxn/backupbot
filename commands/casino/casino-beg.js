@@ -6,7 +6,7 @@ module.exports = {
     aliases: [""],
     cooldown: 1800000,
     description: "Casino Beg",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
 
         let RN = Math.floor(Math.random() * 100) + 1
         if(RN > 50) {
@@ -25,7 +25,7 @@ module.exports = {
                     data.save()
                     message.channel.send(user.username + ` begged and obtained $${amount.toLocaleString()}.`)
                 } else {
-                    return message.channel.send("Looks like you dont have any records yet. Create your account now by typing `.start`")
+                    return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                 }
             })
         } else {

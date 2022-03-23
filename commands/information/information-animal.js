@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed, Message } = require('discord.js')
 const Axios = require('axios')
 
 module.exports = {
@@ -6,8 +6,17 @@ module.exports = {
     aliases: ["ani"],
     description: "Information Animal",
     cooldown: 0,
-    async execute(client, message, args) {
-        if(args[0] === 'dog') {
+    async execute(client, message, args, prefix) {
+        if(!args[0]) {
+            const embed = new MessageEmbed()
+            .setTitle('Animal List')
+            .setColor('RANDOM')
+            .setTimestamp()
+            .addField(`Commands:`, "`dog, cat, breed, fox, birds, panda, koala`")
+            .addField(`Prefix(es):`, "`ani`")
+
+            message.channel.send({embeds: [embed]})
+        } else if(args[0] === 'dog') {
             Axios.get('https://api.thedogapi.com/v1/images/search')
             .then((res) => {
                 const dog = new MessageEmbed()
@@ -83,6 +92,42 @@ module.exports = {
                 const embed = new MessageEmbed()
                 .setTitle('BIRDS!')
                 .setImage(res.data[0])
+                .setColor('RANDOM')
+                .setTimestamp()
+
+                message.channel.send({embeds: [embed]})
+            })
+        } else if(args[0] === "panda") {
+            let RN = Math.floor(Math.random() * 100) - 1
+            if(RN > 50) {
+                Axios.get('https://some-random-api.ml/img/panda')
+                .then((res) => {
+                    const embed = new MessageEmbed()
+                    .setTitle('PANDAAAA')
+                    .setImage(res.data.link)
+                    .setTimestamp()
+                    .setColor('RANDOM')
+
+                    message.channel.send({embeds: [embed]})
+                })
+            } else {
+                Axios.get('https://some-random-api.ml/img/red_panda')
+                .then((res) => {
+                    const embed = new MessageEmbed()
+                    .setTimestamp()
+                    .setTitle('RED PANDAAAA')
+                    .setImage(res.data.link)
+                    .setColor('RANDOM')
+
+                    message.channel.send({embeds: [embed]})
+                })
+            }
+        } else if(args[0] === 'koala') {
+            Axios.get('https://some-random-api.ml/img/koala')
+            .then((res) => {
+                const embed = new MessageEmbed()
+                .setTitle('KOALAAA')
+                .setImage(res.data.link)
                 .setColor('RANDOM')
                 .setTimestamp()
 

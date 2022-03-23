@@ -6,7 +6,7 @@ module.exports = {
     aliases: [""],
     cooldown: 1800000,
     description: "Casino Rob",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
         const target = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const user = message.author
         let RN = Math.floor(Math.random() * 100) + 1        
@@ -30,6 +30,8 @@ module.exports = {
                 if(data) {
                     data.wallet += amount
                     data.save()
+                } else {
+                    message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                 }
             })
     
@@ -57,6 +59,8 @@ module.exports = {
                     userID: user.id
                 })
 
+                if(!amounts) return message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
+
                 const consumed = amounts.wallet
                 let amount = Math.floor(Math.random() * (consumed / 2) + 0)
                 const embed = new MessageEmbed()
@@ -72,6 +76,8 @@ module.exports = {
                         data.wallet -= amount
                         data.save()
                         message.channel.send({embeds: [embed]})
+                    } else {
+                        message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                     }
                 })
 

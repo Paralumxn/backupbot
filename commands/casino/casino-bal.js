@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["bal"],
     cooldown: 0,
     description: "Casino Balance",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
 
         const user = message.author
         const bal = await economy.findOne({
@@ -15,7 +15,7 @@ module.exports = {
         })
 
         if(!bal) {
-            return message.reply(user.username + ` don't have any records yet.`)
+            return message.reply(user.username + `Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
         }
 
         const total = parseInt(bal.wallet + bal.bank)

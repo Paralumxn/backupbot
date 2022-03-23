@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["with"],
     cooldown: 0,
     description: "Casino Withdraw",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
         if(args[0] === 'all') {
             const user = message.author
 
@@ -31,7 +31,7 @@ module.exports = {
                     data.save()
                     message.channel.send(`You sucessfully withdrawed $${withdraw.bank.toLocaleString()}`)
                 } else {
-                    return message.channel.send("Looks like you dont have any records yet. Create your account now by typing `.start`")
+                    return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                 }
             })
         } else {

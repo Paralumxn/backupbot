@@ -6,10 +6,18 @@ module.exports = {
     aliases: [""],
     cooldown: 0,
     description: "Casino Add",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
         if(!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return message.reply("You can't use this command")
 
-        if(args[1] === 'wallet') {
+        if(!args[0]) {
+            const embed = new MessageEmbed()
+            .setTitle("Moderators Command")
+            .addField(`Use this command by typing:`, `${prefix}add (member) wallet <amount>\n${prefix}add (member) bank <amount>`)
+            .setColor('RANDOM')
+            .setTimestamp()
+
+            message.channel.send({embeds: [embed]})
+        } else if(args[1] === 'wallet') {
             const amount = parseFloat(args[2])
             const target = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 

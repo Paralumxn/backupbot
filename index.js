@@ -76,13 +76,13 @@ client.on('messageCreate', async (message) => {
         if(cmd) {
             if(cmd.cooldown) {
                 if(Timeout.has(`${cmd.name}${message.author.id}`)) return message.channel.send(`You already used this command. Wait for ${ms(Timeout.get(`${cmd.name}${message.author.id}`) - Date.now(), {long: true})} to use again.`)
-                if(cmd) cmd.execute(client, message, args)
+                if(cmd) cmd.execute(client, message, args, prefix)
                 Timeout.set(`${cmd.name}${message.author.id}`, Date.now() + cmd.cooldown)
                 setTimeout(() => {
                     Timeout.delete(`${cmd.name}${message.author.id}`)
                 }, cmd.cooldown)
             } else {
-                if(cmd) cmd.execute(client, message, args)
+                if(cmd) cmd.execute(client, message, args, prefix)
             }
         }
     } catch(err) {

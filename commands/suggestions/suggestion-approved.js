@@ -11,9 +11,7 @@ module.exports = {
             const data = await Schema.findOne({
                 guildId: message.guild.id
             })
-            const channel = message.guild.channels.cache.find(c => c.id === data.suggestionChannel).catch(() => {
-                message.reply("Suggestion Channel still not set yet.")
-            })
+            const channel = message.guild.channels.cache.find(c => c.id === data.suggestionChannel)
             let SuggestionID = args[0]
             const embed = new MessageEmbed()
             .setTitle("Missing Arguement")
@@ -31,7 +29,7 @@ module.exports = {
             if(!Comment) return message.reply({embeds: [embed1]})
     
             try {
-                let Suggestion = await channel.message.fetch(SuggestionID, {limit: 150});
+                let Suggestion = await channel.messages.fetch(SuggestionID, {limit: 150});
                 let SuggestionEmbed = Suggestion.embeds[0]
                 const messageAuthorig = await client.users.cache.find((c) => c.tag === SuggestionEmbed.author.name)
                 const guildURL = message.guild.iconURL()
@@ -67,8 +65,9 @@ module.exports = {
                 message.reply({embeds: [embed], content: `${message.author}`})
                 console.log(err)
             }
-        } catch {
+        } catch (err) {
             message.reply("Suggestion Channel still not setted by admin.")
+            console.log(err)
         }
     }
 }

@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["dep"],
     cooldown: 0,
     description: "Casino Deposit",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
         if(args[0] === 'all') {
             const user = message.author
 
@@ -31,7 +31,7 @@ module.exports = {
                     data.save()
                     message.channel.send(`You sucessfully deposited $${deposit.wallet.toLocaleString()}`)
                 } else {
-                    return message.channel.send("Looks like you dont have any records yet. Create your account now by typing `.start`")
+                    return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                 }
             })
         } else {
