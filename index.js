@@ -11,11 +11,13 @@ const client = new Client
   Intents.FLAGS.GUILD_VOICE_STATES], 
  partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
+ const { level, connection } = require('./config.json')
+
  const mongoose = require('mongoose')
- mongoose.connect(process.env.connection, {useUnifiedTopology: true, useNewUrlParser: true})
+ mongoose.connect(connection, {useUnifiedTopology: true, useNewUrlParser: true})
 
  const Levels = require('discord.js-leveling')
- Levels.setURL(process.env.level)
+ Levels.setURL(level)
 const ms = require('ms')
 const fs = require('fs');
 client.commands = new Collection();
