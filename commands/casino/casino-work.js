@@ -5,7 +5,7 @@ module.exports = {
     name: "work",
     aliases: [""],
     description: "Casino Work",
-    cooldown: 30,
+    cooldown: 1000 * 30,
     async execute(client, message, args) {
 
         const min = 10000

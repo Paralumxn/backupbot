@@ -4,7 +4,7 @@ const economy = require('../../Schemas/casinoSchema/main-schema')
 module.exports = {
     name: "daily",
     aliases: [""],
-    cooldown: 86400,
+    cooldown: 1000 * 86400,
     description: "Casino Daily",
     async execute(client, message, args) {
         const amount = 500000
