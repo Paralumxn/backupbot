@@ -54,11 +54,27 @@ module.exports = {
             .setDescription(`**INFORMATION COMMAND** || To use this command, type ${prefix}commands`)
             .setColor('RANDOM')
             .setTimestamp()
-            .addField(`MODERATION:`, "`nsfw, casino, afk, animal, anime, avatar, confess, leaderboard-xp, level, meme, messagecount, roleinfo, trivia, uptime, vote, whois, suggestion`")
+            .addField(`FRIENDLY COMMANDS:`, "`nsfw, casino, afk, animal, anime, avatar, confess, leaderboard-xp, level, meme, messagecount, roleinfo, trivia, uptime, vote, whois, suggestion, base64, binary, help <command>`")
 
             
             let pages = [page1, page2, page3, page4, page5]
             paginator(message, pages)
+        } else if(args[0]) {
+            try {
+                const cmd = client.commands.find(x => x.name == args[0])
+            
+                const embed = new MessageEmbed()
+                .setColor('RANDOM')
+                .setTimestamp()
+                .addField(`NAME:`, `${cmd.name}`)
+                .addField(`DESCRIPTION:`, `${cmd.description || "No Description Found"}`)
+                .addField(`ALIASES:`, `${cmd?.aliases[0] ? cmd.aliases.join(", ") : "No aliases"}`)
+                
+                message.channel.send({embeds: [embed]})
+            } catch {
+                message.reply("Wrong Syntax, Give Command name.")
+            }
+            
         }
     }
 }
