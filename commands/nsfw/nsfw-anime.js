@@ -13,7 +13,7 @@ module.exports = {
             if(!args[0]) {
                 const embed = new MessageEmbed()
                 .setTitle('NSFW REAL LIFE LIST')
-                .addField(`This command only works for NSFW Channels`, "`erokemo, hentai, hentai-ass || h-ass, hentai-midriff || h-midriff, hentai-thigh || h-thigh, kitsune, lewd, hentai-nekopussy || h-nekopussy, hentai-nekofeet || h-nekofeet, hentai-nekosolo || h-nekosolo, hentai-nekotits || h-nekotits, wallpaper`")
+                .addField(`This command only works for NSFW Channels`, "`erokemo, hentai, ass, midriff, thigh, kitsune, lewd, nekopussy, nekofeet, nekosolo, nekotits, wallpaper`")
                 .addField(`New added:`, "`ecchi`")
                 .setTimestamp()
                 .setColor('RANDOM')

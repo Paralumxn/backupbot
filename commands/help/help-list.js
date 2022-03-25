@@ -5,7 +5,7 @@ module.exports = {
     name: "help",
     aliases: ["h"],
     description: "Help List",
-    usage: "help || h",
+    usage: "help",
     async execute(client, message, args, prefix) {
         if(!args[0]) {
             const page1 = new MessageEmbed()
@@ -61,18 +61,18 @@ module.exports = {
             paginator(message, pages)
         } else if(args[0]) {
             try {
-                const cmd = client.commands.find(x => x.name == args[0])
-            
+                const cmd = client.commands.find(x => x.name == args[0]) || client.commands.find(x => x.aliases == args[0]) || client.commands.find(x => x.description == args.slice(0).join(" "))
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
                 .setTimestamp()
                 .addField(`NAME:`, `${cmd.name}`)
                 .addField(`DESCRIPTION:`, `${cmd.description || "No Description Found"}`)
                 .addField(`ALIASES:`, `${cmd?.aliases[0] ? cmd.aliases.join(", ") : "No aliases"}`)
+                .addField(`USAGE:`, `${prefix}${cmd.usage || "No usage found."}`)
                 
                 message.channel.send({embeds: [embed]})
             } catch {
-                message.reply("Wrong Syntax, Give Command name.")
+                message.reply("Something went wrong. Contact the developer of this bot.")
             }
             
         }
