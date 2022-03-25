@@ -4,7 +4,7 @@ const { key } = require('../../config.json')
 
 module.exports = {
     name: "definition",
-    aliases: ["def"],
+    aliases: ["def", "define"],
     cooldown: 0,
     description: "To give definiton to a word",
     usage: "definition",
@@ -13,7 +13,7 @@ module.exports = {
             const embed = new MessageEmbed()
             .setDescription('DEFINITION')
             .setDescription("You can use this for finding a definition of a word.")
-            .addField("To use this:", `${prefix} <Word>`)
+            .addField("To use this:", `${prefix}definition <Word>`)
             .setColor('RANDOM')
             .setTimestamp()
 
