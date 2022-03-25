@@ -1,4 +1,5 @@
 {
     "connection" : "mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/main",
-    "level" : "mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/main"
+    "level" : "mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/main",
+    "key": "a1775adc-045e-4169-a4e1-c1c163ff3543"
 }
