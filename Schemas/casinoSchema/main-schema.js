@@ -5,7 +5,8 @@ const ecoSchema = new mongoose.Schema({
     userID: { type: String },
     userName: { type: String },
     wallet: { type: Number, default: 0 },
-    bank: { type: Number, default: 0 }
+    bank: { type: Number, default: 0 },
+    items: { type: Array, default: [] }
     
 })
 

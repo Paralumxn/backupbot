@@ -22,7 +22,11 @@ module.exports = {
                     userID: member.id,
                     wallet: 0,
                     bank: 0,
-                    items: []
+                    items: {
+                        item: "",
+                        itemName: "",
+                        itemDescription: ""
+                    }
                 }).save()
             }
 
