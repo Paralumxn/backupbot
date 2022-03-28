@@ -54,7 +54,7 @@ module.exports = {
             .setDescription(`**INFORMATION COMMAND** || To use this command, type ${prefix}commands`)
             .setColor('RANDOM')
             .setTimestamp()
-            .addField(`FRIENDLY COMMANDS:`, "`nsfw, casino, afk, animal, anime, avatar, confess, leaderboard-xp, level, meme, messagecount, roleinfo, trivia, uptime, vote, whois, suggestion, base64, binary, help <command>, definition`")
+            .addField(`FRIENDLY COMMANDS:`, "`nsfw, casino, afk, animal, anime, avatar, confess, leaderboard-xp, level, meme, messagecount, roleinfo, trivia, uptime, vote, whois, suggestion, base64, binary, help <command>, definition, handlers`")
 
             
             let pages = [page1, page2, page3, page4, page5]
