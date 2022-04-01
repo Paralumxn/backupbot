@@ -114,6 +114,7 @@ client.on('messageCreate', async (message) => {
     })
 })
 
+
 /**
  * SCHEMA FOR SET CHANNELS
  */
@@ -419,91 +420,95 @@ client.on('guildMemberAdd', async (member) => {
         guildID: member.guild.id
     })
 
-    if(member.guild.id === `${roleb.guildID}`) {
-        const user = await Levels.fetch(member.id, member.guild.id);
-      if(user.level == 2) {
-      let role = member.guild.roles.cache.find(role => role.name == "2・Peasant.");
-      role = member.guild.roles.cache.find(role => role.name == "2・Peasant.");
-      member.roles.add(role).catch((err) => console.log)
-      }
-      
-      if(user.level == 5) {
-      let role = member.guild.roles.cache.find(role => role.name == "5・Commoner.");
-      role = member.guild.roles.cache.find(role => role.name == "5・Commoner.");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 10) {
-      let role = member.guild.roles.cache.find(role => role.name == "10・Young Hunter.");
-      role = member.guild.roles.cache.find(role => role.name == "10・Young Hunter.");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 15) {
-      let role = member.guild.roles.cache.find(role => role.name == "15・Veteran Hunter.");
-      role = member.guild.roles.cache.find(role => role.name == "15・Veteran Hunter.");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 20) {
-      let role = member.guild.roles.cache.find(role => role.name == "20・Warrior");
-      role = member.guild.roles.cache.find(role => role.name == "20・Warrior");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 25) {
-      let role = member.guild.roles.cache.find(role => role.name == "25・Grand Warrior");
-      role = member.guild.roles.cache.find(role => role.name == "25・Grand Warrior");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 30) {
-      let role = member.guild.roles.cache.find(role => role.name == "30・Champion");
-      role = member.guild.roles.cache.find(role => role.name == "30・Champion");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 40) {
-      let role = member.guild.roles.cache.find(role => role.name == "40・Demi God.");
-      role = member.guild.roles.cache.find(role => role.name == "40・Demi God.");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 50) {
-      let role = member.guild.roles.cache.find(role => role.name == "50・God");
-      role = member.guild.roles.cache.find(role => role.name == "50・God");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 60) {
-      let role = member.guild.roles.cache.find(role => role.name == "60・Almighty God");
-      role = member.guild.roles.cache.find(role => role.name == "60・Almighty God");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 70) {
-      let role = member.guild.roles.cache.find(role => role.name == "70・Demon God");
-      role = member.guild.roles.cache.find(role => role.name == "70・Demon God");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 80) {
-      let role = member.guild.roles.cache.find(role => role.name == "80・Celestial Attendant");
-      role = member.guild.roles.cache.find(role => role.name == "80・Celestial Attendant");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 90) {
-      let role = member.guild.roles.cache.find(role => role.name == "90・Celestial");
-      role = member.guild.roles.cache.find(role => role.name == "90・Celestial");
-      member.roles.add(role).catch((err) => console.log)
-      }
-
-      if(user.level == 100) {
-      let role = member.guild.roles.cache.find(role => role.name == "100・Grand Celestial");
-      role = member.guild.roles.cache.find(role => role.name == "100・Grand Celestial");
-      member.roles.add(role).catch((err) => console.log)
+    try {
+        if(member.guild.id === `${roleb.guildID}`) {
+            const user = await Levels.fetch(member.id, member.guild.id);
+          if(user.level == 2) {
+          let role = member.guild.roles.cache.find(role => role.name == "2・Peasant.");
+          role = member.guild.roles.cache.find(role => role.name == "2・Peasant.");
+          member.roles.add(role).catch((err) => console.log)
+          }
+          
+          if(user.level == 5) {
+          let role = member.guild.roles.cache.find(role => role.name == "5・Commoner.");
+          role = member.guild.roles.cache.find(role => role.name == "5・Commoner.");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 10) {
+          let role = member.guild.roles.cache.find(role => role.name == "10・Young Hunter.");
+          role = member.guild.roles.cache.find(role => role.name == "10・Young Hunter.");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 15) {
+          let role = member.guild.roles.cache.find(role => role.name == "15・Veteran Hunter.");
+          role = member.guild.roles.cache.find(role => role.name == "15・Veteran Hunter.");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 20) {
+          let role = member.guild.roles.cache.find(role => role.name == "20・Warrior");
+          role = member.guild.roles.cache.find(role => role.name == "20・Warrior");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 25) {
+          let role = member.guild.roles.cache.find(role => role.name == "25・Grand Warrior");
+          role = member.guild.roles.cache.find(role => role.name == "25・Grand Warrior");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 30) {
+          let role = member.guild.roles.cache.find(role => role.name == "30・Champion");
+          role = member.guild.roles.cache.find(role => role.name == "30・Champion");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 40) {
+          let role = member.guild.roles.cache.find(role => role.name == "40・Demi God.");
+          role = member.guild.roles.cache.find(role => role.name == "40・Demi God.");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 50) {
+          let role = member.guild.roles.cache.find(role => role.name == "50・God");
+          role = member.guild.roles.cache.find(role => role.name == "50・God");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 60) {
+          let role = member.guild.roles.cache.find(role => role.name == "60・Almighty God");
+          role = member.guild.roles.cache.find(role => role.name == "60・Almighty God");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 70) {
+          let role = member.guild.roles.cache.find(role => role.name == "70・Demon God");
+          role = member.guild.roles.cache.find(role => role.name == "70・Demon God");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 80) {
+          let role = member.guild.roles.cache.find(role => role.name == "80・Celestial Attendant");
+          role = member.guild.roles.cache.find(role => role.name == "80・Celestial Attendant");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 90) {
+          let role = member.guild.roles.cache.find(role => role.name == "90・Celestial");
+          role = member.guild.roles.cache.find(role => role.name == "90・Celestial");
+          member.roles.add(role).catch((err) => console.log)
+          }
+    
+          if(user.level == 100) {
+          let role = member.guild.roles.cache.find(role => role.name == "100・Grand Celestial");
+          role = member.guild.roles.cache.find(role => role.name == "100・Grand Celestial");
+          member.roles.add(role).catch((err) => console.log)
+        }
     }
+    } catch {
+
     }
 })
 
