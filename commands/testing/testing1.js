@@ -4,7 +4,7 @@ module.exports = {
     name: "testing1",
     aliases: ["test1"],
     description: "Testing Area",
-    async execute(client, message, args) {
-        
+    async execute(client, message, args, prefix) {
+       
     }
 }

@@ -7,7 +7,26 @@ module.exports = {
     description: "Casino Slot Machine",
     cooldown: 0,
     usage: "slotmachine",
-    async execute(client, message, args) {
+    async execute(client, message, args, prefix) {
+        if(!args[0]) {
+            const embed = new MessageEmbed()
+            .setTitle('Slot Machine')
+            .setDescription(`To play this game, type:\n${prefix}slotmachine <amount>`)
+            .setColor('RANDOM')
+            .setTimestamp()
+
+            message.channel.send({embeds: [embed]})
+        } else if(args[0] === 'all') {
+            const exist = await economy.findOne({
+                guildID: message.guild.id,
+                userID: message.author.id
+            })
+
+            if(!exist) return message.reply("You don't have any records yet.")
+            if(exist.wallet === 0) {
+                return message.reply("You dont have any balance on your wallet.")
+            }
+        } else if(args[0]) {
         const amount = parseFloat(args[0])
         const exist = await economy.findOne({
             guildID: message.guild.id,
@@ -17,6 +36,8 @@ module.exports = {
         if(!exist) return message.reply("You don't have any records yet.")
         const embed = new MessageEmbed()
         .setDescription(`You don't have enough balance, your current balance is $${exist.wallet.toLocaleString()}`)
+        .setColor('RANDOM')
+        .setTimestamp()
         if(amount > exist.wallet) return message.channel.send({embeds: [embed]})
 
         let slots = ["💎", "❤️", "♠️"];
@@ -53,6 +74,7 @@ module.exports = {
                 .setColor('RANDOM')
                 message.channel.send({embeds: [embed]});
             })
+        }
         }
     }
 }

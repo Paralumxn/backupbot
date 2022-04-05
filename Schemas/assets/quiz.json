@@ -1,0 +1,266 @@
+[
+    {
+        "question" : "Who is paraluman's idol from japan?",
+        "answers" : ["kanon", "kanon from leaders"]
+    },
+
+    {
+        "question" : "What name is paraluman's bot developing?",
+        "answers" : ["reborn bot", "reborn"]
+    },
+
+    {
+        "question" : "What year was the very first model of the iPhone released?",
+        "answers" : ["2007"]
+    },
+    
+    {
+        "question" : "What’s the shortcut for the “copy” function on most computers?",
+        "answers" : ["ctrl c", "ctrl+c", "control + c", "control + c"]
+    },
+    
+    {
+        "question" : "What is often seen as the smallest unit of memory?",
+        "answers" : ["kilobyte", "kilobytes", "kb"]
+    },
+    
+    {
+        "question" : "Is Java a type of OS?",
+        "answers" : ["No", "nope"]
+    },
+    
+    {
+        "question" : "Who is often called the father of the computer?",
+        "answers" : ["Charles Babbage"]
+    },
+    
+    {
+        "question" : "What does “HTTP” stand for?",
+        "answers" : ["HyperText Transfer Protocol"]
+    },
+    
+    {
+        "question" : "What is the name of the man who launched eBay back in 1995?",
+        "answers" : ["Pierre Omidyar"]
+    },
+    
+    {
+        "question" : "Which email service is owned by Microsoft?",
+        "answers" : ["Hotmail"]
+    },
+    
+    {
+        "question" : "Google Chrome, Safari, Firefox, and Explorer are different types of what?",
+        "answers" : ["Web browsers", "browsers"]
+    },
+    
+    {
+        "question" : "What was Twitter’s original name?",
+        "answers" : ["twttr"]
+    },
+    
+    {
+        "question" : "Who discovered penicillin?",
+        "answers" : ["Alexander Fleming"]
+    },
+    
+    {
+        "question" : "Who was the first woman to win a Nobel Prize (in 1903)?",
+        "answers" : ["Marie Curie"]
+    },
+    
+    {
+        "question" : "What part of the atom has no electric charge?",
+        "answers" : ["Neutron"]
+    },
+    
+    {
+        "question" : "What is the symbol for potassium?",
+        "answers" : ["K"]
+    },
+    
+    {
+        "question" : "What is meteorology the study of?",
+        "answers" : ["The weather"]
+    },
+    
+    {
+        "question" : "Which planet is the hottest in the solar system?",
+        "answers" : ["Venus"]
+    },
+    
+    {
+        "question" : "Which natural disaster is measured with a Richter scale?",
+        "answers" : ["Earthquakes"]
+    },
+    
+    {
+        "question" : "What animals are pearls found in?",
+        "answers" : ["Oysters", "oyster"]
+    },
+    
+    {
+        "question" : "Which planet has the most gravity?",
+        "answers" : ["Jupiter"]
+    },
+    
+    {
+        "question" : "How many molecules of oxygen does ozone have?",
+        "answers" : ["three", "3"]
+    },
+    
+    {
+        "question" : "What is Hawkeye’s real name?",
+        "answers" : ["Clint Barton"]
+    },
+    
+    {
+        "question" : "Which Avenger is the only one who could calm the Hulk down?",
+        "answers" : ["Black Widow"]
+    },
+    
+    {
+        "question" : "Night Crawler, member of the X-Men, has what kind of powers?",
+        "answers" : ["Can teleport"]
+    },
+    
+    {
+        "question" : "Which infinity stone was located on Vormir?",
+        "answers" : ["Soul Stone"]
+    },
+    
+    {
+        "question" : "Which original Avenger was not in the first few movies?",
+        "answers" : ["The Wasp"]
+    },
+    
+    {
+        "question" : "What was Superman’s birth name?",
+        "answers" : ["Kal-El"]
+    },
+    
+    {
+        "question" : "What is the name of Batman’s butler?",
+        "answers" : ["Alfred"]
+    },
+    
+    {
+        "question" : "Aquaman is from which city under the sea?",
+        "answers" : ["Atlantis"]
+    },
+    
+    {
+        "question" : "Who is Green Lantern’s nemesis?",
+        "answers" : ["Sinestro"]
+    },
+    
+    {
+        "question" : "What does DC stand for?",
+        "answers" : ["Detective Comics"]
+    },
+    
+    {
+        "question" : "What is the name of the song that Queen Elsa sings as she builds her ice castle in the movie Frozen?",
+        "answers" : ["let it go"]
+    },
+    
+    {
+        "question" : "How many films did Sean Connery play James Bond in?",
+        "answers" : ["seven", "7"]
+    },
+    
+    {
+        "question" : "Which Indiana Jones movie was released back in 1984?",
+        "answers" : ["Indiana Jones and the Temple of Doom"]
+    },
+    
+    {
+        "question" : "How many Lord of the Rings films are there?",
+        "answers" : ["Three", "3"]
+    },
+    
+    {
+        "question" : "What was the name of the actor who played Jack Dawson in Titanic?",
+        "answers" : ["Leonardo DiCaprio"]
+    },
+    
+    {
+        "question" : "Which popular TV show featured house Targaryen and Stark?",
+        "answers" : ["Game of Thrones"]
+    },
+    
+    {
+        "question" : "What was the name of the family who starred in 7th Heaven?",
+        "answers" : ["The Camdens"]
+    },
+    
+    {
+        "question" : "Which cartoon character lives in a pineapple under the sea?",
+        "answers" : ["Spongebob Squarepants", "spongebob"]
+    },
+    
+    {
+        "question" : "In what year was the first episode of South Park aired?",
+        "answers" : ["1997"]
+    },
+    
+    {
+        "question" : "Which actor appeared in films “Face Off” and “Ghost Rider”?",
+        "answers" : ["Nicholas Cage"]
+    },
+    
+    {
+        "question" : "Who played Wolverine?",
+        "answers" : ["Hugh Jackman"]
+    },
+    
+    {
+        "question" : "Which actress won the Oscar for Best Actress in 2003?",
+        "answers" : ["Nicole Kidman"]
+    },
+    
+    {
+        "question" : "The Young Victoria was played by which British actress?",
+        "answers" : ["Emily Blunt"]
+    },
+    
+    {
+        "question" : "How old was Coco Gauff when she first beat Venus Williams?",
+        "answers" : ["15", "fifteen"]
+    },
+    
+    {
+        "question" : "In which year did Usain Bolt set his 100m in 9.58 seconds world record?",
+        "answers" : ["2009"]
+    },
+    
+    {
+        "question" : "How many times had Rafael Nadal won the French Open by March 2020?",
+        "answers" : ["12", "twelve"]
+    },
+    
+    {
+        "question" : "When Michael Jordan played for the Chicago Bulls, how many NBA Championships did he win?",
+        "answers" : ["six", "6"]
+    },
+    
+    {
+        "question" : "Who did Forbes name the youngest self-made billionaire in 2019?",
+        "answers" : ["Kylie Jenner"]
+    },
+    
+    {
+        "question" : "Which Dutch makeup artist came out as being transgender in 2020?",
+        "answers" : ["De Jager"]
+    },
+    
+    {
+        "question" : "What anime has titans?",
+        "answers" : ["Attack on titan", "aot"]
+    },
+    
+    {
+        "question" : "Who's one piece character always getting lost",
+        "answers" : ["zoro"]
+    }
+]

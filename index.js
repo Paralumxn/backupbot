@@ -114,7 +114,6 @@ client.on('messageCreate', async (message) => {
     })
 })
 
-
 /**
  * SCHEMA FOR SET CHANNELS
  */
