@@ -14,7 +14,7 @@ module.exports = {
                 const embed = new MessageEmbed()
                 .setTitle('NSFW REAL LIFE LIST')
                 .addField(`This command only works for NSFW Channels`, "`erokemo, hentai, ass, midriff, thigh, kitsune, lewd, nekopussy, nekofeet, nekosolo, nekotits, wallpaper`")
-                .addField(`New added:`, "`ecchi`")
+                .addField(`New added:`, "`ecchi, nsfw_avatar, nsfw_neko_gif`")
                 .setTimestamp()
                 .setColor('RANDOM')
                 .setFooter({text: `${message.author.username}`})
@@ -38,7 +38,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === "hentai-ass" || args[0] === "h-ass") {
+            } else if(args[0] === "ass") {
                 const hentaiass = await nsfw.hentaiass();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -47,7 +47,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === "hentai-midriff" || args[0] === "h-midriff") {
+            } else if(args[0] === "midriff") {
                 const hmidriff = await nsfw.hmidriff();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -56,7 +56,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === "hentai-thigh" || args[0] === "h-thigh") {
+            } else if(args[0] === "thigh") {
                 const hentaithigh = await nsfw.hentaithigh();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -83,7 +83,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === 'hentai-nekofeet' || args[0] === "h-nekofeet") {
+            } else if(args[0] === 'nekofeet') {
                 const nekofeet = await nsfw.nekofeet();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -92,7 +92,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === 'hentai-nekopussy' || args[0] === 'h-nekopussy') {
+            } else if(args[0] === 'nekopussy') {
                 const nekopussy = await nsfw.nekopussy();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -101,7 +101,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === 'hentai-nekosolo' || args[0] === 'h-nekosolo') {
+            } else if(args[0] === 'nekosolo') {
                 const solo = await nsfw.solo();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -110,7 +110,7 @@ module.exports = {
                 .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
                 
                 message.channel.send({embeds: [embed]})
-            } else if(args[0] === "hentai-nekotits" || args[0] === "h-nekotits") {
+            } else if(args[0] === "nekotits") {
                 const nekotits = await nsfw.nekotits();
                 const embed = new MessageEmbed()
                 .setColor('RANDOM')
@@ -139,6 +139,28 @@ module.exports = {
                     .setColor('RANDOM')
                     .setTimestamp()
                     .setFooter({text: `Favorites: ${res.data.images[0].favourites}`})
+
+                    message.channel.send({embeds: [embed]})
+                })
+            } else if(args[0] === "nsfw_avatar") {
+                Axios.get('https://nekos.life/api/v2/img/nsfw_avatar')
+                .then((res) => {
+                    const embed = new MessageEmbed()
+                    .setTitle('NSFW AVATAR')
+                    .setImage(res.data.url)
+                    .setColor('RANDOM')
+                    .setTimestamp()
+                    
+                    message.channel.send({embeds: [embed]})
+                })
+            } else if(args[0] === "nsfw_neko_gif") {
+                Axios.get('https://nekos.life/api/v2/img/nsfw_neko_gif')
+                .then((res) => {
+                    const embed = new MessageEmbed()
+                    .setTitle('Neko Gif')
+                    .setImage(res.data.url)
+                    .setColor('RANDOM')
+                    .setTimestamp()
 
                     message.channel.send({embeds: [embed]})
                 })

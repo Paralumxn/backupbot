@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@iamtraction/google-translate": "^1.1.2",
     "axios": "^0.26.1",
     "canvas": "^2.9.0",
     "dbd-dark-dashboard": "^1.6.45",

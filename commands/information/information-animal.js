@@ -12,7 +12,7 @@ module.exports = {
             .setTitle('Animal List')
             .setColor('RANDOM')
             .setTimestamp()
-            .addField(`Commands:`, "`dog, cat, breed, fox, birds, panda, koala`")
+            .addField(`Commands:`, "`dog, cat, breed, fox, birds, panda, koala, bunny, duck, penguin`")
             .addField(`Prefix(es):`, "`ani`")
 
             message.channel.send({embeds: [embed]})
@@ -128,6 +128,28 @@ module.exports = {
                 const embed = new MessageEmbed()
                 .setTitle('KOALAAA')
                 .setImage(res.data.link)
+                .setColor('RANDOM')
+                .setTimestamp()
+
+                message.channel.send({embeds: [embed]})
+            })
+        } else if(args[0] === "bunny") {
+            Axios.get('https://api.bunnies.io/v2/loop/random/?media=gif,png')
+            .then((res) => {
+                const embed = new MessageEmbed()
+                .setTitle('BUNNYYY')
+                .setImage(res.data.media.gif)
+                .setColor('RANDOM')
+                .setTimestamp()
+
+                message.channel.send({embeds: [embed]})
+            })
+        } else if(args[0] === "duck") {
+            Axios.get('https://random-d.uk/api/v1/random?type=gif')
+            .then((res) => {
+                const embed = new MessageEmbed()
+                .setTitle('DUCKS')
+                .setImage(res.data.url)
                 .setColor('RANDOM')
                 .setTimestamp()
 
