@@ -11,12 +11,9 @@ module.exports = {
 
         const target = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const reason = args.slice(1).join(" ") || "No Reason"
-
+        target.timeout(null)
         if(!target) return message.reply("Who are you going to unmute?")
         if(!target.moderatable) return message.reply("I can't unmute this person!")
-
-        let role = message.guild.roles.cache.find(role => role.name === "Muted")
-        target.roles.remove(role)
 
         const embed = new MessageEmbed()
         .setTitle('SCREAM!')
